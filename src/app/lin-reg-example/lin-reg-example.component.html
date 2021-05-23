@@ -1,0 +1,14 @@
+<p>lin-reg-example works!</p>
+<div id="train-tensors" *ngIf="trainTensors">
+    <div id="train-tensors-size">{{trainTensors.sizeMB}}</div>
+    <div id="train-tensors-time">{{trainTensors.timeSec}}</div>
+</div>
+
+<div id="test-tensors" *ngIf="testTensors">
+    <div id="test-tensors-size">{{testTensors.sizeMB}}</div>
+    <div id="test-tensors-time">{{testTensors.timeSec}}</div>
+</div>
+
+<div id="model" *ngIf="model">
+    <div id="model">{{model}}</div>
+</div>
