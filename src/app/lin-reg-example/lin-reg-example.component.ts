@@ -50,19 +50,14 @@ export class LinRegExampleComponent implements OnInit, AfterViewInit {
 
     this.model.add(layers.dense({inputShape: [1], units: 1}));
     this.model.compile({optimizer: 'sgd', loss: 'meanAbsoluteError'});
-    this.x = this.cService;
-    console.log(this.cService.test(), "constr");
    }
 
   ngOnInit(): void {
-   console.log(this.cService.test(), "ngOnInit");
   }
 
   ngAfterViewInit(): void {
-    console.log(this.cService.test(), "ngAfterViewInit");
     this.run();   
   }
-
 
    run() {
     // Load and plot the original input data that we are going to train on.
@@ -78,6 +73,7 @@ export class LinRegExampleComponent implements OnInit, AfterViewInit {
         y: d.mpg,
       }));
     
+
       render.scatterplot(
         {name: 'Horsepower v MPG'},
         {values}, 
